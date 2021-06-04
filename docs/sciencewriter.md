@@ -1,0 +1,4 @@
+ 
+# sciencewriter module
+
+::: sciencewriter.sciencewriter
