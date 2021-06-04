@@ -4,7 +4,7 @@
 [![image](https://pyup.io/repos/github/rayniervanegmond/sciencewriter/shield.svg)](https://pyup.io/repos/github/rayniervanegmond/sciencewriter)
 
 
-**A package to support and maintain argumentation consistency for academic writing**
+**A package to support writing of scientific articles by maintaining argumentation consistency combined with external reference management.**
 
 The purpose of this component is to provide a library that will support the authoring of academic papers based on the argumentation development model explained in the book by Booth, Coloms and Williams (abbrev. BCM), The Craft of Research. 
 
