@@ -2,7 +2,7 @@
 """
 
 from sciencewriter.informationmodel import CoreConcept, AuthorInfo, SciencePaper, Bibliography, \
-             BiblioReference, Note, Argument, Claim, Reason, Evidence, Warrant
+             BiblioReference, Note, Argument, Claim, Reason, Evidence, Warrant, Conclusion
 
 
 class AuthorInfoFindings(CoreConcept): pass
@@ -15,6 +15,7 @@ class ClaimFindings(CoreConcept): pass
 class ReasonFindings(CoreConcept): pass
 class EvidenceFindings(CoreConcept): pass
 class WarrantFindings(CoreConcept): pass
+class ConclusionFindings(CoreConcept): pass
 
 
 class Analyzer():
@@ -104,5 +105,13 @@ class Analyzer():
 
         Args:
             warrant (Warrant): [description]
+        """
+        pass
+
+    def analyze_conclusion(self, conclusion:Conclusion) -> ConclusionFindings:
+        """Asserts that the warrant has all the components that are referenced in the conclusion actually exist and are relevant as specified/justified by the author.
+
+        Args:
+            conclusion (Conclusion): [description]
         """
         pass

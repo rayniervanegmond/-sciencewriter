@@ -1,7 +1,7 @@
-"""Main module."""
+"""Main module for the ScienceWrite application model."""
 
-from sciencewriter.informationmodel import SciencePaper, AuthorInfo
 from sciencewriter._api import *
+from sciencewriter.informationmodel import SciencePaper, AuthorInfo
 
 class ScienceWriterApp():
     """This class represents the application as a whole that exposes the API for other derived works to access and to manipulate the internals of the writing project.

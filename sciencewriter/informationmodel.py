@@ -1,7 +1,7 @@
 """This module holds the complete information model for the scienwriter application.
 """
 
-
+import uuid
 class ScienceWriterApp():
     """This class represents the application as a whole that exposes the API for other derived works to access and to manipulate the internals of the writing project.
     """
@@ -16,8 +16,8 @@ class CoreConcept():
     """This class represents common properties and functions that are used/apply to all information entities in the application. Mostly concerns identity properties for internal references in the application.
     """
     def __init__(self) -> None:
-        self.guuid = ""
-        self.notes:list[Note] = None
+        self.guuid = uuid.uuid4()
+        self.notes:list[Note] = []
         pass
 
 
@@ -46,7 +46,7 @@ class SciencePaper(CoreConcept):
         super().__init__()
         self.argument:Argument = None        
         self.bibliography:Bibliography = None
-        self.authors:list[AuthorInfo] = None
+        self.authors:list[AuthorInfo] = []
     pass
 
 
@@ -58,7 +58,7 @@ class Bibliography(CoreConcept):
     """
     def __init__(self) -> None:
         super().__init__()
-        self.references:dict[str,BiblioReference]= None
+        self.references:dict[str,BiblioReference] = []
         pass
 
 
@@ -68,14 +68,14 @@ class BiblioReference(CoreConcept):
     Args:
         CoreConcept ([type]): [description]
     """
-    def __init__(self, unique_ref, title, journal, pages, url, authors) -> None:
+    def __init__(self) -> None:
         super().__init__()
-        self.unique_ref:str = unique_ref
-        self.title:str = title
-        self.journal:str = journal
-        self.pages:str = pages
-        self.url:str = url
-        self.authors:list[str] = authors
+        self.unique_ref:str = None
+        self.title:str = None
+        self.journal:str = None
+        self.pages:str = None
+        self.url:str = None
+        self.authors:list[str] = []
     pass
 
 
@@ -85,10 +85,10 @@ class Note(CoreConcept):
     Args:
         CoreConcept ([type]): [description]
     """
-    def __init__(self, core_concepts, text) -> None:
+    def __init__(self) -> None:
         super().__init__()
-        self.core_concepts:list[CoreConcept] = core_concepts
-        self.text:str = text
+        self.text:str = None
+        self.core_concepts:list[CoreConcept] = []
     pass
 
 
@@ -101,7 +101,7 @@ class Argument(CoreConcept):
     def __init__(self) -> None:
         super().__init__()
         self.introductory_claim:Claim = None
-        self.claims:list[Claim] = None
+        self.claims:list[Claim] = []
     pass
 
 
@@ -114,7 +114,7 @@ class Claim(CoreConcept):
     def __init__(self) -> None:
         super().__init__()
         self.text:str = None
-        self.reasons:list[Reason] = None
+        self.reasons:list[Reason] = []
     pass
 
 
@@ -127,7 +127,7 @@ class Reason(CoreConcept):
     def __init__(self) -> None:
         super().__init__()
         self.text:str = None
-        self.evidences:list[Evidence] = None
+        self.evidences:list[Evidence] = []
     pass
 
 
@@ -140,7 +140,7 @@ class Evidence(CoreConcept):
     def __init__(self) -> None:
         super().__init__()
         self.text:str = None
-        self.sources:list[BiblioReference] = None
+        self.sources:list[BiblioReference] = []
     pass
 
 
@@ -161,5 +161,18 @@ class Warrant(CoreConcept):
         self.reason:Reason = None
         self.reason:Claim = None
         self.text:str = None
+    pass
+
+
+class Conclusion(CoreConcept):
+    """This class represents the overall conclusion for the science paper that relates to the intial claim of the paper.
+
+    Args:
+        CoreConcept ([type]): [description]
+    """
+    def __init__(self) -> None:
+        super().__init__()
+        self.claim:Claim = None
+        self.conclusion:str = None
     pass
 

@@ -20,7 +20,7 @@ dependency_links = [x.strip().replace("git+", "") for x in all_reqs if "git+" no
 
 requirements = [ ]
 
-setup_requirements = ['pytest-runner', ]
+setup_requirements = ['pytest','pytest-runner', ]
 
 test_requirements = ['pytest>=3', ]
 

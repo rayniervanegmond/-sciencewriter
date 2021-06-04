@@ -2,12 +2,13 @@
 """
 
 from sciencewriter.informationmodel import CoreConcept, AuthorInfo, SciencePaper, Bibliography, \
-            BiblioReference, Note, Argument, Claim, Reason, Evidence, Warrant
+            BiblioReference, Note, Argument, Claim, Reason, Evidence, Warrant, Conclusion
 
 
 from sciencewriter.analysisfeature import AuthorInfoFindings, BibliographyFindings, \
             BiblioReferenceFindings, NoteFindings, ArgumentFindings, ClaimFindings, \
-            ReasonFindings, EvidenceFindings, WarrantFindings, SciencePaperFindings 
+            ReasonFindings, EvidenceFindings, WarrantFindings, SciencePaperFindings, \
+            ConclusionFindings 
 
 
 class Editor():
@@ -95,5 +96,13 @@ class Editor():
 
         Args:
             warrant (Warrant): [description]
+        """
+        pass
+
+    def editsuggest_conclusion(self, findings:ConclusionFindings):
+        """Asserts that the warrant has all the components that make up the conclusion are checked and confirmed.
+
+        Args:
+            conclusion (ConclusionFindings): [description]
         """
         pass
