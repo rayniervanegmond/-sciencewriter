@@ -2,12 +2,14 @@
 
 
 [![image](https://img.shields.io/pypi/v/sciencewriter.svg)](https://pypi.python.org/pypi/sciencewriter)
-[![image](https://pyup.io/repos/github/rayniervanegmond/sciencewriter/shield.svg)](https://pyup.io/repos/github/rayniervanegmond/sciencewriter)
+[![image](https://pepy.tech/badge/sciencewriter)](https://pepy.tech/project/sciencewriter)
+[![image](https://github.com/rayniervanegmond/sciencewriter/workflows/docs/badge.svg)](https://sciencewriter.org)
+[![image](https://github.com/rayniervanegmond/sciencewriter/workflows/build/badge.svg)](https://github.com/rayniervanegmond/sciencewriter/actions?query=workflow%3Abuild)
 
 
 **A package to support writing of scientific articles by maintaining argumentation consistency combined with external reference management.**
 
-The purpose of this component is to provide a library that will support the authoring of academic papers based on the argumentation development model explained in the book by Booth, Coloms and Williams (abbrev. BCM), The Craft of Research. 
+The purpose of this component is to provide a library that will support the authoring of academic papers based on the argumentation development model explained in the book by Booth, Coloms and Williams (abbrev. BCW), The Craft of Research. 
 
 Like many I found this book indispensible to writing solid papers but always thought that it would be great if there was an application that; like a bibliography management application, would maintain the consistency of the argumentation model for a particular paper.
 
