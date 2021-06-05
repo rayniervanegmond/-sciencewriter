@@ -15,6 +15,8 @@ Like many I found this book indispensible to writing solid papers but always tho
 
 The objective I have for this library component is that it will help (aspiring) academic authors write better and internally consistent papers. The purpose for this component is that it will take care of the internal consistency management and (external evidence references) so that other can write application based on the BCM argumentation model.
 
+---
+
 -   Free software: GNU General Public License v3
 -   Documentation: <https://rayniervanegmond.github.io/sciencewriter>
     
